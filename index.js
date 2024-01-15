@@ -37,18 +37,19 @@ box.addEventListener("click",() =>{
 });
 const disabledbox = () => {
     for(let box of boxes){
-box.disabled = false;
+box.disabled = true;
     }
 }
 const enabledbox = () => {
     for(let box of boxes){
-box.disabled = true;
+box.disabled = false;
 box.innerText = "";
     }
 }
 const showinner = (winner) => {
 msg.innerText = `Congratulations,Winner is '${winner}'`;
  msg.classList.remove("hide");
+msg.style.fontSize = "4vw";
 disabledbox();
 }
 
